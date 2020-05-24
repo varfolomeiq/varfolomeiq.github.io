@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+    .main-logo {
+        background-image: url("../img/bg-768.jpg");
+    }
+
+    .advantages__img-cropped {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .advantages__img-full {
+        display: none;
+    }
+
+    .line {
+        background-image: url("../img/line-768.png");
+        min-height: 37px;
+    }
+}
