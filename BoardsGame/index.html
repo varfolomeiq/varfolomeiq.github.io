@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="icon" href="img/icoon/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta charset="UTF-8">
+	<title>Home</title>
+</head>
+
+<body>
+	<div class="page-holder">
+		<div id="wrapper">
+			<div class="image-slider swiper">
+				<div class=" image-slider__wrapper swiper-wrapper">
+					<div class="image-slider__slide swiper-slide">
+						<div class="image-slider__image">
+							<img src="img/banner.jpg" alt="banner">
+						</div>
+					</div>
+					<div class="image-slider__slide swiper-slide">
+						<div class="image-slider__image">
+							<img src="img/banner.jpg" alt="banner">
+						</div>
+					</div>
+					<div class="image-slider__slide swiper-slide">
+						<div class="image-slider__image">
+							<img src="img/banner.jpg" alt="banner">
+						</div>
+					</div>
+					<div class="image-slider__slide swiper-slide">
+						<div class="image-slider__image">
+							<img src="img/banner.jpg" alt="banner">
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination" id="swiper-pagination"></div>
+			</div>
+			<header class="header container" id="header">
+				<div class="header__logo">
+					<a class="logo" href="#">Tabletop</a>
+				</div>
+				<div class="header__search">
+					<input type="search" name="search" value="">
+				</div>
+				<div class="dropdown">
+					<button onclick="functionone()" class="dropbtn">EN</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="#">FR</a>
+						<a href="#">RU</a>
+						<a href="#">UA</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button onclick="functionsecond()" class="dropbtn">My Account</button>
+					<div id="myDropdownsecond" class="dropdown-content-acc">
+						<a href="#">Orders</a>
+						<a href="#">Comparison list</a>
+						<a href="#">Wish list</a>
+						<div class="dropdownq__email">
+							<span>Track my order(s)</span>
+							<input type="email" name="email" value="" placeholder="Order ID/Email">
+						</div>
+						<div class="dropdownq__buttons">
+							<button type="submit" class="sign__btn btn">Sign in</button>
+							<button type="submit" class="register__btn btn">Register</button>
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button onclick="functionthird()" class="dropbtn">1 item(s) for $15.00</button>
+					<div id="myDropdownthird" class="dropdown-content-items">
+						<a class="dropdown-contentw__link" href="#">Age Of Gods <br> 1x $11.36</a>
+						<div class="dropdownw__buttons">
+							<button type="submit" class="view__btn btn">View cart</button>
+							<button type="submit" class="checkout__btn btn">Checkout</button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="menu-wrapper container">
+				<nav class="menu">
+					<ul class="menu__list">
+						<li><a class="menu__link" href="#">About us</a></li>
+						<li><a class="menu__link" href="#">Payment options</a></li>
+						<li><a class="menu__link" href="#">Shipping</a></li>
+						<li><a class="menu__link" href="#">Discount Program</a></li>
+						<li><a class="menu__link" href="#">Comments</a></li>
+						<li><a class="menu__link" href="#">Contacts</a></li>
+					</ul>
+				</nav>
+				<a class="wishlist menu__link" href="#">
+					<span>Wishlist (3)</span>
+				</a>
+			</div>
+			<div class="menu-games-wrapper container">
+				<nav class="menu-games">
+					<ul class="menu-games__list">
+						<li><a class="menu-games__link" href="#">Catalog</a>
+							<ul class="menu-games-drop__list">
+								<li><a class="menu-games-drop__link" href="#">Board games</a></li>
+								<li><a class="menu-games-drop__link" href="#">Miniature games</a></li>
+								<li><a class="menu-games-drop__link" href="#">Card games</a></li>
+								<li><a class="menu-games-drop__link" href="#">Figures</a></li>
+								<li><a class="menu-games-drop__link" href="#">RPG</a></li>
+								<li><a class="menu-games-drop__link" href="#">Accessories</a></li>
+								<li><a class="menu-games-drop__link" href="#">Promos</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="banner-content container">
+				<h1 class="banner-content__title"><span>The best</span><br><span>Board Games</span></h1>
+				<p class="banner-content__text">Your exclusive online store for the widest range of board games in
+					europe!</p>
+			</div>
+			<main class="main container">
+				<aside class="sidebar">
+					<div class="sidebar__selection selection">
+						<form action="#" method="get">
+							<a class="selection__filter" href="#">Game selection</a>
+							<div class="selection__cost cost">
+								<h4 class="cost__title">Cost:</h4>
+								<div id="costrange"></div>
+							</div>
+							<div class="selection__players players">
+								<h4 class="players__title">Number of players:</h4>
+								<div id="playersrange"></div>
+							</div>
+							<div class="selection__age age">
+								<h4 class="age__title">Age:</h4>
+								<div id="agerange"></div>
+							</div>
+							<div class="selection__games">
+								<label class="form-label" for="games1">
+									<input type="checkbox" name="games1" id="games1" value="strategy games" checked>
+									<span></span>
+									<span>strategy games</span>
+								</label>
+								<label class="form-label" for="games2">
+									<input type="checkbox" name="games2" id="games2" value="puzzle game">
+									<span></span>
+									<span>puzzle game</span>
+								</label>
+								<label class="form-label" for="games3">
+									<input type="checkbox" name="games3" id="games3" value="roleplaying game">
+									<span></span>
+									<span>roleplaying game</span>
+								</label>
+								<label class="form-label" for="games4">
+									<input type="checkbox" name="games4" id="games4" value="adventure game">
+									<span></span>
+									<span>adventure game</span>
+								</label>
+								<label class="form-label" for="games5">
+									<input type="checkbox" name="games5" id="games5" value="economic game">
+									<span></span>
+									<span>economic game</span>
+								</label>
+								<label class="form-label" for="games6">
+									<input type="checkbox" name="games6" id="games6" value="creative game">
+									<span></span>
+									<span>creative game</span>
+								</label>
+								<label class="form-label" for="games7">
+									<input type="checkbox" name="games7" id="games7" value="sport game">
+									<span></span>
+									<span>sport game</span>
+								</label>
+							</div>
+							<div class="selection__button">
+								<button class="sidebar-btn" type="submit">select</button>
+							</div>
+						</form>
+						<div class="sidebar__links links">
+							<a class="links__gift" href="">Gift Card</a>
+							<a class="links__sales" href="">Sales Hits</a>
+							<a class="links__ordering" href="">Ordering</a>
+						</div>
+						<button class="button-down">Recently viewed items</button>
+						<div class="panel">
+							<div class="panel__row">
+								<img src="img/cart-gods.png" alt="age of gods">
+								<span>Age Of Gods</span>
+							</div>
+							<div class="panel__row">
+								<img src="img/cart-gods.png" alt="anno 1503">
+								<span>Anno 1503</span>
+							</div>
+							<div class="panel__row">
+								<img src="img/cart-gods.png" alt="a study in emerald">
+								<span>A Study in Emerald</span>
+							</div>
+						</div>
+					</div>
+				</aside>
+				<div class="products">
+					<header class="products__header">
+						<h3 class="products__title">Popular games</h3>
+						<div class="products__header-filters filters">
+							<a class="filters__line" href="#"></a>
+							<a class="filters__square" href="#"></a>
+						</div>
+					</header>
+					<div class="products__cards cards">
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-1.jpg" alt="game">
+								</div>
+								<h3 class="cards__title">Age of Gods</h3>
+								<p class="cards__text">In Age of Gods the players are ancient gods that are trying
+									to make their...</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__star">*</span>
+									<span class="rating__star">*</span>
+									<span class="rating__star">*</span>
+									<span class="rating__star">*</span>
+									<span class="rating__star">*</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$22.72</span>
+									<span class="price__small">$31.80</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-2.png" alt="game">
+								</div>
+								<h3 class="cards__title">Anno 1503</h3>
+								<p class="cards__text">Anno 1503 ...and a new inland world has been discovered.</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__text">Not Rated Yet</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$11.36</span>
+									<span class="price__small">$18.17</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-3.png" alt="game">
+								</div>
+								<h3 class="cards__title">A study in emerald</h3>
+								<p class="cards__text">The game A Study in Emerald draws its central plot from the awrad
+									winning...</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__text">Not Rated Yet</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$45.32</span>
+									<span class="price__small">$90.87</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-2.png" alt="game">
+								</div>
+								<h3 class="cards__title">Anno 1503</h3>
+								<p class="cards__text">Anno 1503 ...and a new inland world has been discovered.</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__text">Not Rated Yet</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$11.36</span>
+									<span class="price__small">$18.17</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-3.png" alt="game">
+								</div>
+								<h3 class="cards__title">A study in emerald</h3>
+								<p class="cards__text">The game A Study in Emerald draws its central plot from the awrad
+									winning...</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__text">Not Rated Yet</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$45.32</span>
+									<span class="price__small">$90.87</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-1.jpg" alt="game">
+								</div>
+								<h3 class="cards__title">Age of Gods</h3>
+								<p class="cards__text">In Age of Gods the players are ancient gods that are trying
+									to make their...</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__text">Not Rated Yet</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$22.72</span>
+									<span class="price__small">$31.80</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-3.png" alt="game">
+								</div>
+								<h3 class="cards__title">A study in emerald</h3>
+								<p class="cards__text">The game A Study in Emerald draws its central plot from the awrad
+									winning...</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__text">Not Rated Yet</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$45.32</span>
+									<span class="price__small">$90.87</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-1.jpg" alt="game">
+								</div>
+								<h3 class="cards__title">Age of Gods</h3>
+								<p class="cards__text">In Age of Gods the players are ancient gods that are trying
+									to make their...</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__text">Not Rated Yet</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$22.72</span>
+									<span class="price__small">$31.80</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+						<div class="cards__box">
+							<a class="cards__item" href="#">
+								<div class="cards__image">
+									<img src="img/game-2.png" alt="game">
+								</div>
+								<h3 class="cards__title">Anno 1503</h3>
+								<p class="cards__text">Anno 1503 ...and a new inland world has been discovered.</p>
+								<div class="cards__rating rating">
+									<span class="rating__text">Rating:</span>
+									<span class="rating__text">Not Rated Yet</span>
+								</div>
+								<div class="cards__price price">
+									<span class="price__big">$11.36</span>
+									<span class="price__small">$18.17</span>
+								</div>
+							</a>
+							<a class="cards__link-add" href="#">Add to cart</a>
+						</div>
+					</div>
+					<div class="parting-words">
+						<h4 class="parting-words__title">Greetings!</h4>
+						<p class="parting-words__text">Are you looking for something special?</p>
+						<p class="parting-words__text">We propose you to learn the full list of our products in <a
+								class="parting-words__link" href="#">catalog.</a></p>
+					</div>
+				</div>
+			</main>
+			<div class="scroll-top scroll-top-btn" id="button">Back to top</div>
+			<footer class="footer" id="footer">
+				<div class="container">
+					<div class="footer__wrapper">
+						<div class="footer__column">
+							<h3 class="footer__title">Contact us</h3>
+							<div class="footer__column-inner">
+								<a class="footer__link footer__link--mail"
+									href="mailto:info@tabletop.com">Email:info@tabletop.com</a>
+								<p class="footer__copyright">© 2012-2018 Tabletop.</p>
+							</div>
+						</div>
+						<div class="footer__column">
+							<h3 class="footer__title">About us</h3>
+							<a class="footer__link" href="#">About us</a>
+							<a class="footer__link" href="#">Privacy policy</a>
+							<a class="footer__link" href="#">Terms of Service</a>
+						</div>
+						<div class="footer__column">
+							<h3 class="footer__title">My account</h3>
+							<a class="footer__link" href="#">Sign in</a>
+							<a class="footer__link" href="#">Create account</a>
+						</div>
+						<div class="footer__column">
+							<h3 class="footer__title">Customer service</h3>
+							<a class="footer__link" href="#">About your order</a>
+							<a class="footer__link" href="#">Wishlist</a>
+							<a class="footer__link" href="#">Comparison list</a>
+						</div>
+						<div class="footer__column">
+							<div class="footer__social social">
+								<a class="social__link social__link--twitter" href="https://twitter.com/"
+									target="_blank">twitter</a>
+								<a class="social__link social__link--facebook" href="https://uk-ua.facebook.com/"
+									target="_blank">facebook</a>
+								<a class="social__link social__link--instagram" href="https://www.instagram.com/"
+									target="_blank">instagram</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+	</div>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
